@@ -16,7 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //  DIT 위치정보 35.166197, 129.072594
+        //  지도의 center 위치, DIT 위치정보 35.166197, 129.072594
         let center = CLLocationCoordinate2DMake(35.166197, 129.072594)
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegionMake(center, span)
@@ -42,7 +42,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         myMapView.delegate = self
     }
     
-
+    // MKMapViewDelegate method
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         let identifier = "MyPin"
